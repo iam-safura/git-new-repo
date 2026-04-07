@@ -35,7 +35,7 @@ pipeline {
                     sh """
                     ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} '
                         sudo chown -R www-data:www-data /var/www/html &&
-                        sudo chmod -R 755 /var/www/html
+                        sudo chmod -R 400 /var/www/html
                     '
                     """
                 }
